@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#quiz {
+    margin-top: 10%;
+}
+
+button {
+    display: block;
+    width: 300px;
+    padding: 2rem;
+}
+
+.answer {
+    margin: auto auto;
+    margin-bottom: 2%;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.answer:hover {
+    background-color: yellow;
+}
+
+#confirm {
+    margin: auto auto;
+    background: green;
+    border: none;
+    color: white;
+    border-radius: 25px;
+}
+
+#confirm:hover {
+    background: rgb(0, 63, 0);
+    cursor: pointer;
+}
