@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     padding: 0;
     margin: 0;
     text-align: center;
@@ -47,4 +47,49 @@ button {
 #confirm:hover {
     background: rgb(0, 63, 0);
     cursor: pointer;
+}
+
+.error {
+    background: red;
+    color: white;
+}
+
+.correct {
+    background: green;
+    color: white;
+    animation: lightCorrect .5s infinite;
+}
+
+#gameOverError {
+    background: black;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#status {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+}
+
+#status button {
+    margin: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes lightCorrect {
+    0%, 49% {
+        background: green;
+    }
+
+    50%, 100% {
+        background: seagreen;
+    }
 }

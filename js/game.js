@@ -1,3 +1,4 @@
+// PERGUNTAS
 let askedQuestions = [];
 const questions = [
     {
@@ -11,7 +12,7 @@ const questions = [
         correct: "answer0"
     },
     {
-        pergunquestionta: "O que é a internet?",
+        question: "O que é a internet?",
         answers: ["Uma central de servidores", "Uma rede mundial de computadores", "Um ecossistema elétrico", "Um único servidor global"],
         correct: "answer1"
     },
@@ -30,6 +31,9 @@ const questions = [
 let numberQuestions = questions.length - 1;
 generateQuestions(numberQuestions);
 
+// END
+
+// GERAR PERGUNTAS E ORDENS DE RESPOSTAS ALEATÓRIAS
 function generateQuestions(maxQuestions) {
     let random = (Math.random() * maxQuestions).toFixed(); 
     random = Number(random);
@@ -55,22 +59,22 @@ function generateQuestions(maxQuestions) {
         if(askedQuestions.length < numberQuestions + 1) {   
             return generateQuestions(maxQuestions);
         } else {
-            console.log('Acabaram as perguntas!');
+            $('#mensagem').html('Parabéns, você acertou todas as suas perguntas.');
+            $('#status').removeClass('hidden');
+            $('#quiz').addClass('hidden');
         }
     }
 }
 
-//REMOVE BUTTON SELECTED
+// END
+
+//REMOVER BOTÕES SELECIONADOS
 $('.answer').on('click', function() {
-    $('.answer').each(function() {
-        if($(this).hasClass('active')){
-            $(this).removeClass('active');
-        }
-    });
+    resetButtons();
     $(this).addClass('active');
 });
 
-//CONFIRM BUTTON
+//BOTÃO DE CONFIRMAR RESPOSTA
 $('#confirm').on('click', function() {
     const id = $('#question').attr('data-id');
     var correct = questions[id].correct   ;
@@ -80,21 +84,68 @@ $('#confirm').on('click', function() {
             const selectedAnswer = $(this).attr('id');
 
             if(correct == selectedAnswer) {
-                console.log('Acertou');
+                $('#'+selectedAnswer).removeClass('active');
+                $('#'+selectedAnswer).removeClass('correct');
                 nextQuestion();
             } else {
-                alert('Errou bobalhão');
+                $('#'+correct).addClass('correct');
+                $('#'+selectedAnswer).removeClass('active');
+                $('#'+selectedAnswer).addClass('error');
+
+                setTimeout(function() {
+                    gameOver();
+                }, 4000);
             }
         }
     });
 });
 
+
+// BOTÃO DE GAME OVER
+$('#gameOverError').on('click', function() {
+    newGame();
+});
+
+// AVANÇAR QUESTÕES SEM REPETILAS
 function nextQuestion() {
+    resetButtons();
+    generateQuestions(numberQuestions);
+}
+
+// NOVO JOGO
+function newGame() {
+    askedQuestions= [];
+    resetButtons();
+    generateQuestions(numberQuestions);
+    $('#quiz').removeClass('hidden');
+    $('#status').addClass('hidden');
+}
+
+// RESETAR BOTÕES SELECIONADOS
+function resetButtons() {
     $('.answer').each( function(){
         if($(this).hasClass('active')) {
             $(this).removeClass('active');
         }
     });
+    $('.answer').each( function(){
+        if($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        }
 
-    generateQuestions(numberQuestions);
+        if($(this).hasClass('correct')) {
+            $(this).removeClass('correct');
+        } 
+        
+        if($(this).hasClass('error')){
+            $(this).removeClass('error');
+        }
+    });
+}
+
+
+function gameOver() {
+    $('#quiz').addClass('hidden');
+    $('#mensagem').html('Game Over.');
+    $('#status').removeClass('hidden');
 }
