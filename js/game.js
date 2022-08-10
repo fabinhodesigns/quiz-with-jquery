@@ -70,8 +70,11 @@ function generateQuestions(maxQuestions) {
 
 //REMOVER BOTÕES SELECIONADOS
 $('.answer').on('click', function() {
-    resetButtons();
-    $(this).addClass('active');
+
+    if($('#quiz').attr('data-status') !== 'stop') {
+        resetButtons();
+        $(this).addClass('active');
+    }
 });
 
 //BOTÃO DE CONFIRMAR RESPOSTA
@@ -89,6 +92,7 @@ $('#confirm').on('click', function() {
                 nextQuestion();
             } else {
                 $('#'+correct).addClass('correct');
+                $('#quiz').attr('data-status', 'stop');
                 $('#'+selectedAnswer).removeClass('active');
                 $('#'+selectedAnswer).addClass('error');
 
@@ -117,6 +121,7 @@ function newGame() {
     askedQuestions= [];
     resetButtons();
     generateQuestions(numberQuestions);
+    $('#quiz').attr('data-status', 'ok');
     $('#quiz').removeClass('hidden');
     $('#status').addClass('hidden');
 }
