@@ -92,6 +92,7 @@ $('#confirm').on('click', function() {
                 nextQuestion();
             } else {
                 $('#'+correct).addClass('correct');
+                $('#confirm').addClass('hidden');
                 $('#quiz').attr('data-status', 'stop');
                 $('#'+selectedAnswer).removeClass('active');
                 $('#'+selectedAnswer).addClass('error');
@@ -120,6 +121,7 @@ function nextQuestion() {
 function newGame() {
     askedQuestions= [];
     resetButtons();
+    $('#confirm').removeClass('hidden');
     generateQuestions(numberQuestions);
     $('#quiz').attr('data-status', 'ok');
     $('#quiz').removeClass('hidden');
