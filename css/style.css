@@ -32,6 +32,10 @@ button {
     background-color: yellow;
 }
 
+.answer.active {
+    background: #c9c9f6;
+}
+
 #confirm {
     margin: auto auto;
     background: green;

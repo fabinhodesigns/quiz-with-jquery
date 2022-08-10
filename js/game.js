@@ -39,6 +39,7 @@ function generateQuestions(maxQuestions) {
         const selectQuestion = questions[random].question;
 
         $('#question').html(selectQuestion);
+        $('#question').attr('data-id', random);
 
         for(var i = 0; i<4; i++) {
             $('#answer'+i).html(questions[random].answers[i]);
@@ -57,4 +58,43 @@ function generateQuestions(maxQuestions) {
             console.log('Acabaram as perguntas!');
         }
     }
+}
+
+//REMOVE BUTTON SELECTED
+$('.answer').on('click', function() {
+    $('.answer').each(function() {
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+        }
+    });
+    $(this).addClass('active');
+});
+
+//CONFIRM BUTTON
+$('#confirm').on('click', function() {
+    const id = $('#question').attr('data-id');
+    var correct = questions[id].correct   ;
+
+    $('.answer').each(function() {
+        if($(this).hasClass('active')){
+            const selectedAnswer = $(this).attr('id');
+
+            if(correct == selectedAnswer) {
+                console.log('Acertou');
+                nextQuestion();
+            } else {
+                alert('Errou bobalhão');
+            }
+        }
+    });
+});
+
+function nextQuestion() {
+    $('.answer').each( function(){
+        if($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        }
+    });
+
+    generateQuestions(numberQuestions);
 }
