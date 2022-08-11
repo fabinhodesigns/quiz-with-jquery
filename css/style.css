@@ -7,17 +7,44 @@
 body {
     padding: 0;
     margin: 0;
-    text-align: center;
+    background: #0c192c;
+    min-height: 100vw;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, h7, p, span {
+    font-family: 'Roboto', sans-serif;
+}
+
+.answer {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 #quiz {
-    margin-top: 10%;
+    margin: 10vh 30vw;
+    position: absolute;
+    width: 40vw;
+}
+
+#question {
+    margin: 1rem 0;
+}
+
+.text-center {
+    text-align: center;
+    color: white;
 }
 
 button {
     display: block;
     width: 300px;
-    padding: 2rem;
+    color: white;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 25%);
+    backdrop-filter: blur(10px);
+    border: 3px solid white !important;
 }
 
 .answer {
@@ -29,28 +56,35 @@ button {
 }
 
 .answer:hover {
-    background-color: yellow;
+    background: rgba(79, 195, 220, 0.40);
+    backdrop-filter: blur(10px);
+    transition: all .3s;
 }
 
 .answer.active {
-    background: #c9c9f6;
+    background: rgba(58, 0, 63, 0.50);
+    backdrop-filter: blur(10px);
 }
 
 #confirm {
     margin: auto auto;
-    background: green;
+    background: rgba(0, 57, 18, 0.5);
+    backdrop-filter: blur(10px);
     border: none;
     color: white;
     border-radius: 25px;
 }
 
 #confirm:hover {
-    background: rgb(0, 63, 0);
+    background: rgba(0, 59, 19, 0.75);
+    backdrop-filter: blur(10px);
     cursor: pointer;
+    transition: all .3s;
 }
 
 .error {
-    background: red;
+    background: rgba(144, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
     color: white;
 }
 
@@ -61,19 +95,22 @@ button {
 }
 
 #gameOverError {
-    background: black;
+    background: rgba(0, 0, 0, 30%);
+    backdrop-filter: blur(10px);
     color: white;
     border-radius: 25px;
     cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #status {
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
     margin-top: 20%;
+    margin-left: 37vw;
+    text-align: center;
+    color: white;
 }
 
 #status button {
@@ -82,6 +119,22 @@ button {
 
 .hidden {
     display: none;
+}
+
+.quiz-space div:nth-child(1) {
+    position: relative;
+}
+
+.quiz-space div:nth-child(2) {
+    position: relative;
+    top: 20px;
+    margin-left: 20px;
+}
+
+.quiz-space div:nth-child(3) {
+    position: relative;
+    top: 20px;
+    margin-left: 20px;
 }
 
 @keyframes lightCorrect {

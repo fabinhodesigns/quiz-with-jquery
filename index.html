@@ -1,30 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="imagem/png" href="img/quiz.png" />
     <link rel="stylesheet" href="css/style.css">
-    <title>QUIZ</title>
+    <link rel="stylesheet" href="css/animation.css">
+    <title>@fabinhodesigns</title>
 </head>
-<body>
-    <div id="quiz" data-status="ok">
-        <h2 id="question"></h2>
-        <div id ="answers">
-            <button id="answer0" class="answer">Resposta 1</button>
-            <button id="answer1" class="answer">Resposta 2</button>
-            <button id="answer2" class="answer">Resposta 3</button>
-            <button id="answer3" class="answer">Resposta 4</button>
-        </div>
-        <br><br>
-        <button id="confirm">Confimar</button>
-    </div>
 
-    <div id="status" class="hidden">
-        <h2 id="mensagem">Game Over</h2>
-        <button id="gameOverError">Novo Jogo</button>
+<body>
+    <div class="quiz-space">
+        <div class="container">
+            <div class="bubbles">
+                <span style="--i:11"></span>
+                <span style="--i:12"></span>
+                <span style="--i:24"></span>
+                <span style="--i:10"></span>
+                <span style="--i:14"></span>
+                <span style="--i:23"></span>
+                <span style="--i:18"></span>
+                <span style="--i:16"></span>
+                <span style="--i:19"></span>
+                <span style="--i:20"></span>
+                <span style="--i:22"></span>
+                <span style="--i:25"></span>
+                <span style="--i:18"></span>
+                <span style="--i:21"></span>
+                <span style="--i:15"></span>
+                <span style="--i:13"></span>
+                <span style="--i:26"></span>
+                <span style="--i:17"></span>
+                <span style="--i:13"></span>
+                <span style="--i:28"></span>
+                <span style="--i:11"></span>
+                <span style="--i:12"></span>
+                <span style="--i:24"></span>
+                <span style="--i:10"></span>
+                <span style="--i:14"></span>
+                <span style="--i:23"></span>
+                <span style="--i:18"></span>
+                <span style="--i:16"></span>
+                <span style="--i:19"></span>
+                <span style="--i:20"></span>
+                <span style="--i:22"></span>
+                <span style="--i:25"></span>
+                <span style="--i:18"></span>
+                <span style="--i:21"></span>
+                <span style="--i:15"></span>
+                <span style="--i:13"></span>
+                <span style="--i:26"></span>
+                <span style="--i:17"></span>
+                <span style="--i:13"></span>
+                <span style="--i:28"></span>
+            </div>
+        </div>
+        <div id="quiz" class="text-center" data-status="ok">
+            <h2 id="question"></h2>
+            <div id="answers">
+                <button id="answer0" class="answer">Resposta 1</button>
+                <button id="answer1" class="answer">Resposta 2</button>
+                <button id="answer2" class="answer">Resposta 3</button>
+                <button id="answer3" class="answer">Resposta 4</button>
+            </div>
+            <br><br>
+            <button id="confirm">Confimar</button>
+        </div>
+        <div id="status" class="hidden">
+            <h1 id="mensagem">Game Over</h1>
+            <button id="gameOverError">Novo Jogo</button>
+        </div>
     </div>
 </body>
 <script src="js/jquery.js"></script>
 <script src="js/game.js"></script>
+
 </html>

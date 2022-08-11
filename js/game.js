@@ -2,28 +2,28 @@
 let askedQuestions = [];
 const questions = [
     {
-        question: "Quais dessas linguagens não são linguagens de programação?",
-        answers: ["HTML", "TypeScript", "JavaScript", "C#"],
+        question: "📅Quais dessas linguagens não são linguagens de programação?",
+        answers: ["🧑‍💻HTML", "🧑‍💻TypeScript", "🧑‍💻JavaScript", "🧑‍💻C#"],
         correct: "answer0"
     },
     {
-        question: "Qual desses é o nome do primeiro computador do mundo?",
-        answers: ["ENIAC", "Mactosh", "Motolix", "Apple ||"],
+        question: "1️⃣Qual desses é o nome do primeiro computador do mundo?",
+        answers: ["💻ENIAC", "💻Mactosh", "💻Motolix", "💻Apple ||"],
         correct: "answer0"
     },
     {
         question: "O que é a internet?",
-        answers: ["Uma central de servidores", "Uma rede mundial de computadores", "Um ecossistema elétrico", "Um único servidor global"],
+        answers: ["🖥️Uma central de servidores", "🖥️Uma rede mundial de computadores", "🖥️Um ecossistema elétrico", "🖥️Um único servidor global"],
         correct: "answer1"
     },
     {
-        question: "Quais memórias dessas listadas são as mais velozes?",
+        question: "📏Quais memórias dessas listadas são as mais velozes?",
         answers: ["SSD / HDD", "Memórias RAMs", "Cachês", "Armazenamento Primário?"],
         correct: "answer2"
     },
     {
-        question: "Qual é o significado de HTML?",
-        answers: ["HyperText Marked Language", "Hyper Markup Language", "HyperText Markuping Language", "HyperText Markup Language"],
+        question: "❓Qual é o significado de HTML?",
+        answers: ["📔HyperText Marked Language", "📔Hyper Markup Language", "📔HyperText Markuping Language", "📔HyperText Markup Language"],
         correct: "answer3"
     } 
 ];
@@ -59,7 +59,7 @@ function generateQuestions(maxQuestions) {
         if(askedQuestions.length < numberQuestions + 1) {   
             return generateQuestions(maxQuestions);
         } else {
-            $('#mensagem').html('Parabéns, você acertou todas as suas perguntas.');
+            $('#mensagem').html('Você acertou todas🥳.');
             $('#status').removeClass('hidden');
             $('#quiz').addClass('hidden');
         }
@@ -153,6 +153,6 @@ function resetButtons() {
 
 function gameOver() {
     $('#quiz').addClass('hidden');
-    $('#mensagem').html('Game Over.');
+    $('#mensagem').html('❌ Game Over ❌');
     $('#status').removeClass('hidden');
 }
