@@ -146,3 +146,11 @@ button {
         background: seagreen;
     }
 }
+
+@media only screen and (max-width: 2600px) {
+    #quiz {
+        margin: 0vh 5vw;
+        position: absolute;
+        width: 85vw;
+    }
+}
