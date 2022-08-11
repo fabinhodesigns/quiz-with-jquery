@@ -154,3 +154,15 @@ button {
         width: 85vw;
     }
 }
+
+@media only screen and (max-width: 500px) {
+    button {
+        display: block;
+        width: 270px;
+        color: white;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 25%);
+        backdrop-filter: blur(10px);
+        border: 3px solid white !important;
+    }
+}
