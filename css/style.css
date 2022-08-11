@@ -153,14 +153,6 @@ button {
         position: absolute;
         width: 85vw;
     }
-    #status {
-        padding: 10px;
-        position: absolute;
-        margin-top: 50%;
-        margin-left: 2vw;
-        text-align: center;
-        color: white;
-    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -172,5 +164,14 @@ button {
         background: rgba(255, 255, 255, 25%);
         backdrop-filter: blur(10px);
         border: 3px solid white !important;
+    }
+
+    #status {
+        padding: 10px;
+        position: absolute;
+        margin-top: 50%;
+        margin-left: 2vw;
+        text-align: center;
+        color: white;
     }
 }
