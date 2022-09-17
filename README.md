@@ -1,4 +1,15 @@
-# A Simple Quiz With jQuery
-Just a simple quiz made with HTML CSS and JQUERY. If you want to test your knowledge, visit this link:
+# 🧑‍💻 A Simple Quiz With jQuery
 
-https://fabinho070.github.io/quiz-with-jquery/
+Just a simple quiz made with HTML CSS and JQUERY. If you want to test your knowledge.
+
+[Click here to view](https://fabinho070.github.io/quiz-with-jquery/) ❤️ 
+
+## 🛠️ Technologies
+- HTML
+- CSS
+- JavaScript (jQuery)
+- Git e Github
+
+## 📞 Contact
+- freitasfabiano08@gmail.com
+- @fabinhofreitastw
