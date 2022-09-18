@@ -8,7 +8,7 @@ Just a simple quiz made with HTML CSS and JQUERY. If you want to test your knowl
 - HTML
 - CSS
 - JavaScript (jQuery)
-- Git e Github
+- Git and Github
 
 ## 📞 Contact
 - freitasfabiano08@gmail.com
