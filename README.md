@@ -12,4 +12,4 @@ Just a simple quiz made with HTML CSS and JQUERY. If you want to test your knowl
 
 ## 📞 Contact
 - freitasfabiano08@gmail.com
-- @fabinhofreitastw
+- @ffabiiin
